@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baca Komik - [Judul Komik]</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">KomiKu</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="comics.html">Daftar Komik</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        </div>
+    </header>
+
+    <main class="comic-reader-page">
+        <h2 id="readerComicTitle"></h2>
+        <div class="comic-viewer">
+            <img id="comicPage" src="" alt="Halaman Komik" class="comic-page">
+        </div>
+    </main>
+
+    <footer>
+        <div class="container pagination-nav">
+            <button id="prevPage" class="nav-button">&laquo; Sebelumnya</button>
+            <span id="pageInfo">Halaman X dari Y</span>
+            <button id="nextPage" class="nav-button">Berikutnya &raquo;</button>
+             <a href="comic_detail.html" class="btn-secondary">Kembali ke Detail</a>
+        </div>
+        <div class="container footer-info">
+            <p>&copy; 2025 KomiKu. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="reader.js"></script>
+</body>
+</html>

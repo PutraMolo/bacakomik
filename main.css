@@ -1,0 +1,174 @@
+/* css/main.css */
+
+/* Reset Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan footer selalu di bawah */
+}
+
+/* Kontainer Utama untuk Responsivitas */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Padding samping untuk layar kecil */
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Biru gelap */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3498db; /* Biru cerah saat hover */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none; /* Sembunyikan secara default di desktop */
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    margin-top: auto; /* Mendorong footer ke bawah */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    margin-top: 10px;
+}
+
+/* Tombol Umum */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: 2px solid #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.btn-secondary:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Media Queries untuk Header & Footer (Global) */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap; /* Izinkan wrap */
+        justify-content: center;
+    }
+    header nav {
+        width: 100%; /* Navigasi mengambil seluruh lebar */
+        order: 3; /* Pindahkan navigasi ke bawah logo */
+        margin-top: 10px;
+        display: none; /* Sembunyikan secara default untuk mobile (akan diaktifkan JS) */
+    }
+    header nav.active { /* Class untuk menu toggle */
+        display: block;
+    }
+    header nav ul {
+        flex-direction: column; /* Ubah ke kolom */
+        align-items: center;
+        width: 100%;
+    }
+    header nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: block; /* Tampilkan tombol toggle */
+        margin-left: auto; /* Dorong ke kanan */
+    }
+    .logo {
+        margin-right: auto; /* Dorong logo ke kiri */
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+    .pagination-nav { /* Khusus untuk footer di reader.html */
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

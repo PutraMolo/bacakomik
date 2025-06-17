@@ -1,0 +1,327 @@
+/* css/pages.css */
+
+/* --- Landing Page --- */
+.landing-page {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.featured-comics h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsif grid */
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.comic-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.comic-card:hover {
+    transform: translateY(-5px);
+}
+
+.comic-card img {
+    width: 100%;
+    height: 350px; /* Tinggi cover tetap */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    display: block;
+    margin-bottom: 15px;
+}
+
+.comic-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.comic-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* --- Comics List Page --- */
+.comics-list-page {
+    padding: 40px 0;
+}
+
+.comics-list-page h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+/* Grid layout sama dengan comic-grid di landing-page */
+
+
+/* --- Comic Detail Page --- */
+.comic-detail-page {
+    padding: 40px 0;
+    flex-grow: 1; /* Agar konten mengisi ruang dan mendorong footer */
+}
+
+.detail-content {
+    display: flex;
+    gap: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 30px;
+    align-items: flex-start; /* Elemen sejajar di atas */
+}
+
+.cover-image img {
+    max-width: 300px; /* Lebar maksimum untuk cover */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-text {
+    flex-grow: 1; /* Memungkinkan teks mengisi sisa ruang */
+}
+
+.info-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.info-text p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.info-text .genre, .author, .status {
+    color: #555;
+    font-weight: 500;
+}
+
+.info-text .synopsis {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.info-text .btn-primary, .info-text .btn-secondary {
+    margin-right: 15px;
+    margin-bottom: 10px; /* Untuk responsivitas */
+}
+
+/* --- Comic Reader Page --- */
+.comic-reader-page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#readerComicTitle {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comic-viewer {
+    width: 100%;
+    max-width: 900px; /* Lebar maksimum area komik */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden; /* Pastikan gambar tidak keluar dari batas */
+}
+
+.comic-page {
+    width: 100%; /* Gambar mengisi seluruh lebar kontainer */
+    height: auto; /* Menjaga rasio aspek */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center; /* Pusatkan tombol navigasi */
+    align-items: center;
+    margin-top: 20px; /* Jarak dari gambar komik */
+    margin-bottom: 10px;
+    gap: 20px;
+    padding: 10px 0;
+    width: 100%; /* Memastikan lebar navigasi penuh */
+    max-width: 900px; /* Sesuaikan dengan lebar viewer */
+}
+
+.nav-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.7;
+}
+
+#pageInfo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #2c3e50;
+}
+
+
+/* --- Media Queries untuk Halaman Spesifik --- */
+
+@media (max-width: 992px) {
+    .hero-section h2 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    .comic-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .detail-content {
+        flex-direction: column; /* Ubah ke kolom untuk detail di tablet */
+        align-items: center;
+        text-align: center;
+    }
+    .cover-image img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .info-text h2 {
+        font-size: 2rem;
+    }
+    .info-text .btn-primary, .info-text .btn-secondary {
+        width: 80%; /* Tombol detail mengisi lebih banyak */
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 15px;
+    }
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .comic-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk ponsel */
+    }
+    .comic-card img {
+        height: 300px;
+    }
+    .detail-content {
+        padding: 20px;
+    }
+    .cover-image img {
+        max-width: 200px;
+    }
+    .info-text h2 {
+        font-size: 1.8rem;
+    }
+    .info-text p {
+        font-size: 1rem;
+    }
+    #readerComicTitle {
+        font-size: 1.5rem;
+    }
+    .pagination-nav {
+        flex-wrap: wrap; /* Izinkan tombol wrap */
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 45%; /* Ambil sekitar setengah lebar */
+        max-width: 150px;
+    }
+    #pageInfo {
+        font-size: 1.1rem;
+        flex-basis: 100%; /* Ambil seluruh baris */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+    .comic-card h4 {
+        font-size: 1.1rem;
+    }
+    .detail-content {
+        padding: 15px;
+    }
+    .info-text h2 {
+        font-size: 1.5rem;
+    }
+    .info-text .synopsis {
+        font-size: 0.9rem;
+    }
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    #pageInfo {
+        font-size: 1rem;
+    }
+}

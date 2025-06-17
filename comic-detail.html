@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Komik - KomiKu</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">KomiKu</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="comics.html">Daftar Komik</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+        </div>
+    </header>
+
+    <main class="comic-detail-page">
+        <div class="container">
+            <div class="detail-content">
+                <div class="cover-image">
+                    <img id="detailComicCover" src="images/cover/comic_a_cover.jpg" alt="Cover Komik">
+                </div>
+                <div class="info-text">
+                    <h2 id="detailComicTitle">Judul Komik Contoh</h2>
+                    <p class="genre">Genre: <span id="detailComicGenre">Sci-Fi, Petualangan</span></p>
+                    <p class="author">Penulis: <span id="detailComicAuthor">Anonim</span></p>
+                    <p class="status">Status: <span id="detailComicStatus">Berlanjut</span></p>
+                    <p class="synopsis" id="detailComicSynopsis">
+                        Ini adalah sinopsis singkat dari komik ini. Komik ini menceritakan tentang petualangan seorang pahlawan muda yang harus menyelamatkan galaksi dari ancaman alien. Dia akan bertemu berbagai karakter unik dan menghadapi banyak rintangan.
+                    </p>
+                    <a href="reader.html?comic=comic_a" class="btn-primary">Mulai Baca</a>
+                    <a href="comics.html" class="btn-secondary">Kembali ke Daftar Komik</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 KomiKu. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="comicDetail.js"></script> </body>
+</html>
